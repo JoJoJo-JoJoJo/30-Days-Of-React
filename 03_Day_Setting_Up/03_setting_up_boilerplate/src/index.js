@@ -8,7 +8,7 @@ import asabenehImage from './images/asabeneh.jpg'
 import doSomeMath from './math.js'
 
 // to import the other modules
-// since these modules were not exported as default we have to desctructure
+// since these modules were not exported as default we have to destructure
 import { addTwo, multiply, subtract } from './math.js'
 
 import * as everything from './math.js'
