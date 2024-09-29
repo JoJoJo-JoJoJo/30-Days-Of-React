@@ -1,0 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-image: linear-gradient(to bottom right, hsl(175, 60%, 76%), white);
+}

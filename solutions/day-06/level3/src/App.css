@@ -1,0 +1,58 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+
+.sub-title {
+  font-size: 1.2em;
+  text-decoration: overline underline;
+}
+
+.desc {
+  font-size: 0.8em;
+}
+
+ul, li {
+  all: unset;
+}
+
+.graph-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-item {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 15vw 65vw 15vw;
+}
+
+.name {
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.bar {
+  height: 80%;
+  background-color: orange;
+  max-width: 100%;
+  min-width: 1%;
+  border-radius: 5px;
+}
+
+.number {
+  text-align: right;
+  font-weight: bold;
+}
