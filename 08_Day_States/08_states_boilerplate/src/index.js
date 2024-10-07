@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import asabenehImage from './images/asabeneh.jpg'
 
-// Fuction to show month date year
+// Function to show month date year
 
 const showDate = (time) => {
   const months = [
