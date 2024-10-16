@@ -5,6 +5,7 @@ import { TextareaEdit } from '../Textarea/Textarea.jsx';
 import Post from '../Post/Post';
 import { initData } from '../initData.js';
 
+
 export default function App() {
   const [textarea, setTextarea] = useState('');
   /*
@@ -71,18 +72,17 @@ export default function App() {
   };
 
 
-  const startEditing = (id) => {
+  const startEditing = (id, initText) => {
+    setTextarea(initText);
     setEditing({
-      ...editing,
-      editor: !editing.editor,
+      editor: true,
       id: id
     });
   }
 
   const cancelEdit = () => {
     setEditing({
-      ...editing,
-      editor: !editing.editor,
+      editor: false,
       id: ''
     });
     setTextarea('');
@@ -105,8 +105,7 @@ export default function App() {
     // Inserts the updated post copy back into the 'posts' list at the original index.
 
     setEditing({
-      ...editing,
-      editor: !editing.editor,
+      editor: false,
       id: ''
     });
   };
@@ -114,13 +113,17 @@ export default function App() {
   const delPost = (id) => {
     const currPostIndex = posts.findIndex((post) => post.id === id);
 
+    // Only the IDs of posts with an id more than 'currPostIndex' need to be changed.
+    const higherId = [...posts.slice(currPostIndex + 1)];
+    higherId.forEach(post => {
+      post.id--
+    });
+
     const newPosts = [
       ...posts.slice(0, currPostIndex),
-      ...posts.slice(currPostIndex + 1)
+      ...higherId
     ];
     setPosts(newPosts);
-    //! Cannot update a component (`App`) while rendering a different component (`Post`).
-    //? Might be able to cleanup with 'useEffect', by cleaning up the old 'posts' value.
 
     // Sets the 'posts' list to a copy of 'post', minus the post to be deleted.
   };
@@ -134,20 +137,19 @@ export default function App() {
       <div className='posts-list'>
         {posts.map((post, i) => {
           const key = `tweet${i + 1}`;
-          const id = `post${i + 1}`;
           return (
             <div className='post-grid' key={key}>
               {
                 /* Render the editor in place of the selected post when editing. */
-                editing.editor && editing.id === id ? <TextareaEdit
-                  id={id}
+                editing.editor && editing.id === i ? <TextareaEdit
+                  id={i}
                   handleSubmit={handleSubmit}
                   handleChange={handleChange}
                   state={textarea}
                   cancelEdit={cancelEdit}
                 /> : <Post
                   key={key}
-                  id={id}
+                  id={i}
                   postInfo={post}
                   startEditing={startEditing}
                   del={delPost}

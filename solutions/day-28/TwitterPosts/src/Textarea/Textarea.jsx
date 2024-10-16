@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
+import "./Textarea.css";
+
 export const TextareaEdit = ({ id, handleSubmit, handleChange, state, cancelEdit }) => (
-    <form className="post-editor" onSubmit={handleSubmit(true, id)}>
+    <form className="post-editor" onSubmit={(e) => {
+        handleSubmit(e, true, id);
+    }}>
         <textarea
             rows="6"
             cols="70"
@@ -8,7 +12,9 @@ export const TextareaEdit = ({ id, handleSubmit, handleChange, state, cancelEdit
             onChange={handleChange}
             value={state}
         ></textarea>
-        <button className="btn submit" type="submit">Save</button>
-        <button className="btn cancel" onClick={cancelEdit}>Cancel</button>
+        <div className="btn-div">
+            <button className="btn save" type="submit">Save</button>
+            <button className="btn cancel" onClick={cancelEdit}>Cancel</button>
+        </div>
     </form>
 );

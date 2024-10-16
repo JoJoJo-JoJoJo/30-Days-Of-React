@@ -3,7 +3,9 @@ import "./NewPostSection.css";
 
 export default function NewPostSection({ handleSubmit, handleChange, textarea }) {
     return (
-        <form onSubmit={handleSubmit} className="new-post">
+        <form onSubmit={(e) => {
+            handleSubmit(e);
+        }} className="new-post">
             <div className="new-tweet">
                 <textarea
                     rows="6"

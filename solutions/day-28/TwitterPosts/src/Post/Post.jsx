@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./Post.css";
-import {  } from "react";
+import { } from "react";
 import {
     EditIcon,
     DelIcon,
@@ -14,7 +14,9 @@ export default function Post({ id, postInfo, startEditing, del }) {
     return (
         <>
             <div className="user-info">
-                <AccPfpIcon />
+                <div className="user-svg">
+                    <AccPfpIcon />
+                </div>
                 <p className="name-and-tag">
                     <span className="name">{postInfo.user.name}</span>
                     {postInfo.user.tag}
@@ -22,10 +24,12 @@ export default function Post({ id, postInfo, startEditing, del }) {
             </div>
             <p className="post-text">{postInfo.text}</p>
             <div className="edit-del-btns">
-                <button className="btn edit-btn" onClick={startEditing(id)}>
+                <button className="btn edit-btn" onClick={() => {
+                    startEditing(id, postInfo.text);
+                }}>
                     <EditIcon />
                 </button>
-                <button className="btn del-btn" onClick={del(id)}>
+                <button className="btn del-btn" onClick={() => { del(id) }}>
                     <DelIcon />
                 </button>
             </div>
