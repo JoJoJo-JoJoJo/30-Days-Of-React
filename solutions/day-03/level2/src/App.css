@@ -1,0 +1,110 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    max-width: 75vw;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    min-width: 90vw;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.sub-heading {
+    font-size: 1.2em;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn, .input {
+    all: unset;
+}
+
+.btn:focus, .input:focus {
+    border: revert;
+}
+
+.sub-input {
+    background-color: white;
+    margin: 10px 5px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.sub-input::placeholder {
+    text-align: center;
+}
+
+.sub-btn {
+    background-color: lightcoral;
+    color: white;
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.sub-btn:hover {
+    border: 2px outset lightcoral;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-width: 90vw;
+}
+
+.user-pfp {
+    max-width: 200px;
+}
+
+.skills-container {
+    margin: 0;
+    padding: 0;
+}
+
+.skills-container > p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.user-card > .role-tag {
+    font-size: 1.2em;
+}
+
+.skills-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.skill {
+    margin: 5px;
+    background-color: lightblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,58 @@
+.new-post {
+    height: 15vh;
+    width: 90%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.text-enter {
+    height: auto;
+    width: auto;
+    resize: none;
+    background-color: linen;
+    color: black;
+    border: 2px solid pink;
+    border-radius: 2px;
+    outline: none;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.text-enter:hover {
+    border: 2px solid lightpink;
+}
+
+.label {
+    font-size: 12px;
+    color: purple;
+    user-select: none;
+}
+
+.btn.submit {
+    margin-left: 8%;
+    height: 30%;
+    width: 15%;
+    text-align: center;
+    border: 1px solid pink;
+    border-radius: 5px;
+    user-select: none;
+    background-color: linen;
+    color: pink;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn.submit:hover {
+    background-color: pink;
+    color: white;
+}

@@ -1,0 +1,46 @@
+.post-editor {
+    grid-area: text;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.text-edit {
+    height: auto;
+    width: auto;
+    resize: none;
+    outline: none;
+    background-color: linen;
+    color: black;
+    border: 2px solid pink;
+}
+
+.post-editor .btn-div {
+    height: 150%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn.save, .btn.cancel {
+    height: 40%;
+    width: 70%;
+    text-align: center;
+    border: 1px solid pink;
+    border-radius: 5px;
+    user-select: none;
+    background-color: linen;
+    color: pink;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn.save:hover, .btn.cancel:hover {
+    background-color: pink;
+    color: white;
+}

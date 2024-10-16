@@ -1,0 +1,67 @@
+.user-info {
+    grid-area: user;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.user-svg {
+    height: 3em;
+}
+
+.name-and-tag {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.name {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.post-text {
+    grid-area: text;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.edit-del-btns {
+    width: 100%;
+    grid-area: edit-del;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn, .del-btn {
+    height: auto;
+    width: auto;
+    border: none;
+}
+
+.social-btns {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    grid-area: date;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    user-select: none;
+}
+
+.date-center {
+    font-style: italic;
+    font-size: 14px;
+}

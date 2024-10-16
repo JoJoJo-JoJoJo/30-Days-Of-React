@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  position: relative;
+  --top: 85%;
+  --left: 85%;
+}
+
+.special-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  background-color: #fff;
+  height: 50px;
+  width: 200px;
+  margin: 10px;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+}
+
+.text {
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}

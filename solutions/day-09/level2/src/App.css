@@ -1,0 +1,26 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.season-color {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-color {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 10em;
+    font-weight: bold;
+}

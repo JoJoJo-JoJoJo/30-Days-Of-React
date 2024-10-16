@@ -1,0 +1,32 @@
+@use "sass:meta";
+@use "sass:math";
+
+@mixin font-color {
+    color: lightgreen
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+
+    .header {
+        font-size: 50px;
+        text-decoration: overline underline;
+        background-color: hsl(math.$pi, 100%, 40%);
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1fr, 3);
+        grid-template-rows: repeat(1fr 2);
+        grid-template-areas: "subscribe subscribe bell",
+            "like dislike bell";
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}

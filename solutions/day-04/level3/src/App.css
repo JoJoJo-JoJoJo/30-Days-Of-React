@@ -1,0 +1,29 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hex-div-container {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex-div {
+  min-width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex-div > p {
+  color: white;
+  font-size: 5em;
+  letter-spacing: 5px;
+}

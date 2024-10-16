@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  $riverBlue: #234E6D;
+  $concreteGrey: #788991;
+  $honeyYellow: #F8AA01;
+  $deepOrange: #F86814;
+  $dullGold: #B99B33;
+  $skyPearl: #D0D3DE;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $riverBlue;
+  color: $concreteGrey;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
