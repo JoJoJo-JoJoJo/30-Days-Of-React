@@ -1,0 +1,33 @@
+$riverBlue: #234E6D;
+$concreteGrey: #788991;
+$honeyYellow: #F8AA01;
+$deepOrange: #F86814;
+$dullGold: #B99B33;
+$skyPearl: #D0D3DE;
+
+.title-div {
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: $skyPearl;
+    border-radius: 2px;
+    min-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        color: $dullGold;
+        font-size: 50px;
+        text-decoration: overline underline;
+    }
+
+    .total-c {
+        color: $honeyYellow;
+    }
+
+    .current-c {
+        color: $deepOrange;
+    }
+}
+

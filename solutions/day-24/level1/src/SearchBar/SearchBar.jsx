@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 import "./SearchBar.scss";
-// Search bar should search name, capital and languages.
 
-export default function SearchBar({ handleChange, text }) {
+export default function SearchBar({ text, handleChange }) {
     return (
         <input
+            id="search-input"
+            type="search"
             className="input search-bar"
-            placeholder="Search countries"
+            placeholder="Search countries/capitals..."
             value={text}
-            onChange={handleChange("searchtxt", "update")}
+            onChange={handleChange}
         />
     )
 }

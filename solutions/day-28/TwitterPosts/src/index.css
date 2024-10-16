@@ -3,16 +3,11 @@
 }
 
 :root {
-  $riverBlue: #234E6D;
-  $concreteGrey: #788991;
-  $honeyYellow: #F8AA01;
-  $deepOrange: #F86814;
-  $dullGold: #B99B33;
-  $skyPearl: #D0D3DE;
-
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: $riverBlue;
-  color: $concreteGrey;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
 body {
@@ -22,4 +17,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+}
+
+svg {
+  fill: #000;
 }
